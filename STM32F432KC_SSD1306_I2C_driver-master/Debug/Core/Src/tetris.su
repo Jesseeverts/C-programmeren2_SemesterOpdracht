@@ -1,0 +1,7 @@
+tetris.c:14:6:ssd1306_tetris_L	16	static
+tetris.c:105:6:ssd1306_tetris_Z	16	static
+tetris.c:205:6:ssd1306_tetris_R	16	static
+tetris.c:300:6:ssd1306_tetris_V	16	static
+tetris.c:373:6:ssd1306_tetris_Z_90	16	static
+tetris.c:468:6:ssd1306_tetris_T	16	static
+tetris.c:561:6:ssd1306_tetris_T_links	16	static

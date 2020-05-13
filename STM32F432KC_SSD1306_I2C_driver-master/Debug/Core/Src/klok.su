@@ -1,0 +1,5 @@
+klok.c:12:6:ssd1306_smiley	8	static
+klok.c:69:6:ssd1306_klok2	8	static
+klok.c:282:6:ssd1306_klok	8	static
+klok.c:495:6:ssd1306_klok3	8	static
+klok.c:709:6:ssd1306_klok4	8	static
