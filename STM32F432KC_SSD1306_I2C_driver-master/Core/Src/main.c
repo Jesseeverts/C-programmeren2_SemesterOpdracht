@@ -126,193 +126,211 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   debug_print("Hello from dev board\r\n");
   ssd1306_Init();
+  ssd1306_Fill(White);
+
   /*eerste figuur*/
   /*int side1 = 0;
   int down1 = -25 ;
   int tel1 = 0;
 
-	while( tel1 < 129){
+	while( tel1 < 128){
 
-		ssd1306_Fill(White);
-		ssd1306_tetris_L(down1, 24);
-		down1 = down1 + 1;
-		tel1 = tel1 + 1;
+		ssd1306_tetris_L_White(down1 -3, 24);
+		ssd1306_tetris_L_Black(down1, 24);
+		down1 = down1 + 3;
+		tel1 = tel1 + 3;
 	}
+	ssd1306_tetris_L_White(101, 24);
+	ssd1306_tetris_L_Black(103, 24);
 
-	while( side1 < 25){
+	while( side1 < 24){
+		ssd1306_tetris_L_White(103,24+side1 -2);
+		ssd1306_tetris_L_Black(103, 24+ side1);
+		side1 = side1 + 2;
+	}
+	ssd1306_tetris_L_White(103,46);
+	ssd1306_tetris_L_Black(103, 47);*/
 
-		ssd1306_Fill(White);
-		ssd1306_tetris_L(104, 24+ side1);
-		side1 = side1 + 1;
-	}*/
+
 	  /*tweede figuur*/
-  /*int tel2 = 0;
+/*	int tel2 = 0;
 	int down2 = -30;
 	int side2 = 0;
 
 	while(tel2 < 128){
-		ssd1306_Fill(White);
-		ssd1306_tetris_L(104, 48);
-		ssd1306_tetris_R(down2, 24);
-		down2 = down2 + 1;
-		tel2 = tel2 + 1;
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_White(down2 - 3, 28);
+		ssd1306_tetris_R_Black(down2, 28);
+		down2 = down2 + 3;
+		tel2 = tel2 + 3;
 	}
-	while(side2 < 18){
-		ssd1306_Fill(White);
-		ssd1306_tetris_L(104, 48);
-		ssd1306_tetris_R(96, 24 + side2);
-		side2 = side2 + 1;
+	while(side2 < 14){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_White(96, 28 + side2-2);
+		ssd1306_tetris_R_Black(96, 28 + side2);
+		side2 = side2 + 2;
 	}*/
 	  /*derde figuur*/
-/*	int tel3 = 0;
+	/*int tel3 = 0;
 	int down3 = -16;
 	int side3 = 0;
 
 	while(tel3 < 129){
 
-		ssd1306_tetris_R(96, 41);
-		ssd1306_tetris_L(104, 48);
-		ssd1306_tetris_V(down3, 24);
-		ssd1306_Fill(White);
-		down3 = down3 + 1;
-		tel3 = tel3 + 1;
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_White(down3-3, 24);
+		ssd1306_tetris_V_Black(down3, 24);
+		down3 = down3 + 3;
+		tel3 = tel3 + 3;
 	}
-	while(side3 < 3){
-		ssd1306_Fill(White);
-
-		ssd1306_tetris_R(96, 41);
-		ssd1306_tetris_L(104, 48);
-		ssd1306_tetris_V(112, 24+side3);
-		side3 = side3 + 1;
-	}
+	ssd1306_tetris_V_White(110, 24);
+	ssd1306_tetris_V_Black(112, 24);
 */
 	 /*vierde figuur*/
 /*int tel4 = 0;
 int down4 = -16;
 int side4 = 0;
 
-	while(tel4<35){
-		ssd1306_Fill(White);
-		ssd1306_tetris_R(96, 41);
-		ssd1306_tetris_L(104, 48);
-		ssd1306_tetris_V(112, 26);
-		ssd1306_tetris_Z(down4, 24);
-		down4 = down4 +1;
-		tel4 = tel4 + 1;
+	while(tel4<45){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_White(down4-3, 24);
+		ssd1306_tetris_Z_Black(down4, 24);
+		down4 = down4 +3;
+		tel4 = tel4 + 3;
 	}
-	ssd1306_Fill(White);
-	ssd1306_tetris_R(96, 41);
-	ssd1306_tetris_L(104, 48);
-	ssd1306_tetris_V(112, 26);
-	ssd1306_tetris_Z(45, 24);
-	ssd1306_Fill(White);
-	ssd1306_tetris_Z_90(45,24);
-	ssd1306_tetris_R(96, 41);
-	ssd1306_tetris_L(104, 48);
-	ssd1306_tetris_V(112, 26);
+	ssd1306_tetris_Z_White(26, 24);
+	ssd1306_tetris_L_Black(103, 47);
+	ssd1306_tetris_R_Black(96,40);
+	ssd1306_tetris_V_Black(112, 24);
+
+
+	ssd1306_tetris_Z_90_Black(34,24);
+	ssd1306_tetris_L_Black(103, 47);
+	ssd1306_tetris_R_Black(96,40);
+	ssd1306_tetris_V_Black(112, 24);
+	ssd1306_tetris_Z_90_White(34,24);
+
 int tel6 =0;
-		while(tel6<13){
-			ssd1306_Fill(White);
-			ssd1306_tetris_R(96, 41);
-			ssd1306_tetris_L(104, 48);
-			ssd1306_tetris_V(112, 26);
-			ssd1306_tetris_Z_90(45, 24 - tel6);
-			tel6=tel6+1;
+		while(tel6<20){
+
+			ssd1306_tetris_L_Black(103, 47);
+			ssd1306_tetris_R_Black(96,40);
+			ssd1306_tetris_V_Black(112, 24);
+			ssd1306_tetris_Z_90_White(34, 24 - tel6+2);
+			ssd1306_tetris_Z_90_Black(34, 24 - tel6);
+			tel6=tel6+2;
 		}
+		ssd1306_tetris_Z_90_White(34, 6);
 int tel5 =0;
-	while(tel5<51){
-		ssd1306_Fill(White);
-		ssd1306_tetris_R(96, 41);
-		ssd1306_tetris_L(104, 48);
-		ssd1306_tetris_V(112, 26);
-		ssd1306_tetris_Z_90(35+down4, 11);
-		down4 = down4 +1;
-		tel5 = tel5 + 1;
-	}*//*
-int side6 = 0;
-int down6 = -30 ;
-int tel6 = 0;
-int tel7 = 79;
-
-		while( tel6 < 80){
-
-			ssd1306_Fill(White);
-			ssd1306_tetris_R(96, 41);
-			ssd1306_tetris_L(104, 48);
-			ssd1306_tetris_V(112, 26);
-			ssd1306_tetris_Z_90(104, 11);
-			ssd1306_tetris_R(down6, 24);
-			down6 = down6 + 1;
-			tel6 = tel6 + 1;
-		}
-
-		while( side6 < 21){
-
-			ssd1306_Fill(White);
-			ssd1306_tetris_R(96, 41);
-			ssd1306_tetris_L(104, 48);
-			ssd1306_tetris_V(112, 26);
-			ssd1306_tetris_Z_90(104, 11);
-			ssd1306_tetris_R(49, 24- side6);
-			side6 = side6 + 1;
-		}
-		while( tel7 < 126){
-
-			ssd1306_Fill(White);
-			ssd1306_tetris_R(96, 41);
-			ssd1306_tetris_L(104, 48);
-			ssd1306_tetris_V(112, 26);
-			ssd1306_tetris_Z_90(104, 11);
-			ssd1306_tetris_R(down6, 4);
-			down6 = down6 + 1;
-			tel7 = tel7 + 1;
-		}*/
-
-
-	int down8 = -16 ;
+int down5=0;
+	while(tel5<81){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_White(33+down5-3, -1);
+		ssd1306_tetris_Z_90_Black(33+down5, -1);
+		down5 = down5 +3;
+		tel5 = tel5 + 3;
+	}*/
+  /*figuur 5*/
+/*	int down8 = -16 ;
 	int tel8 = 0;
 
 				while( tel8 < 80){
 
-					ssd1306_Fill(White);
-					ssd1306_tetris_R(96, 41);
-					ssd1306_tetris_L(104, 48);
-					ssd1306_tetris_V(112, 26);
-					ssd1306_tetris_Z_90(104, 11);
-					ssd1306_tetris_R(96, 4);
-					ssd1306_tetris_T_links(down8,24);
-					down8 = down8 + 1;
-					tel8 = tel8 + 1;
+					ssd1306_tetris_L_Black(103, 47);
+					ssd1306_tetris_R_Black(96,40);
+					ssd1306_tetris_V_Black(112, 24);
+					ssd1306_tetris_Z_90_Black(111, -1);
+
+					ssd1306_tetris_T_links_White(down8-3,24);
+					ssd1306_tetris_T_links_Black(down8,24);
+					down8 = down8 + 3;
+					tel8 = tel8 + 3;
 				}
-	int side9=24;
+				ssd1306_tetris_T_links_White(62,24);
+
 	int tel9=0;
-				while( tel9 < 3){
+				while( tel9 < 18){
 
-					ssd1306_Fill(White);
-					ssd1306_tetris_R(96, 41);
-					ssd1306_tetris_L(104, 48);
-					ssd1306_tetris_V(112, 26);
-					ssd1306_tetris_Z_90(104, 11);
-					ssd1306_tetris_R(96, 4);
-					ssd1306_tetris_T_links(63,side9);
-					side9 = side9 + 1;
-					tel9 = tel9 + 1;
+
+					ssd1306_tetris_L_Black(103, 47);
+					ssd1306_tetris_R_Black(96,40);
+					ssd1306_tetris_V_Black(112, 24);
+					ssd1306_tetris_Z_90_Black(111, -1);
+
+					ssd1306_tetris_T_links_White(63,24-tel9+2);
+					ssd1306_tetris_T_links_Black(63,24-tel9);
+					tel9 = tel9 + 2;
 				}
+				ssd1306_tetris_T_links_White(63,8);
+				ssd1306_tetris_T_links_Black(63,7);
 
-	int down10=63;
-				while( down10 < 90){
+	int down9 = 0;
 
-					ssd1306_Fill(White);
-					ssd1306_tetris_R(96, 41);
-					ssd1306_tetris_L(104, 48);
-					ssd1306_tetris_V(112, 26);
-					ssd1306_tetris_Z_90(104, 11);
-					ssd1306_tetris_R(96, 4);
-					ssd1306_tetris_T_links( down10,26);
-					down10 = down10 + 1;
+			while( down9 < 33){
 
-				}
+					ssd1306_tetris_L_Black(103, 47);
+					ssd1306_tetris_R_Black(96,40);
+					ssd1306_tetris_V_Black(112, 24);
+					ssd1306_tetris_Z_90_Black(111, -1);
 
+					ssd1306_tetris_T_links_White(63+down9-3,7);
+					ssd1306_tetris_T_links_Black(63+down9,7);
+					down9 = down9 + 3;
+			}
+			ssd1306_tetris_T_links_White(93,7);
+			ssd1306_tetris_T_links_Black(95,7);
+*/
+
+
+	int down11 = -16;
+
+			while(down11 < 60){
+				ssd1306_tetris_L_Black(103, 47);
+				ssd1306_tetris_R_Black(96,40);
+				ssd1306_tetris_V_Black(112, 24);
+				ssd1306_tetris_Z_90_Black(111, -1);
+				ssd1306_tetris_T_links_Black(95,7);
+
+
+				ssd1306_tetris_T_White(down11-3, 20);
+				ssd1306_tetris_T_Black(down11, 20);
+				down11 = down11 + 3;
+			}
+			ssd1306_tetris_T_White(60, 20);
+	int side11 = 0;
+			while(side11 < 18){
+				ssd1306_tetris_L_Black(103, 47);
+				ssd1306_tetris_R_Black(96,40);
+				ssd1306_tetris_V_Black(112, 24);
+				ssd1306_tetris_Z_90_Black(111, -1);
+				ssd1306_tetris_T_links_Black(95,7);
+
+				ssd1306_tetris_T_White(59, 20 + side11-2);
+				ssd1306_tetris_T_Black(59, 20 + side11);
+				side11 = side11 + 2;
+			}
+
+			ssd1306_tetris_T_White(59, 36);
+	int down12 = 0;
+		while(down12 < 20)
+		{
+			ssd1306_tetris_L_Black(103, 47);
+			ssd1306_tetris_R_Black(96,40);
+			ssd1306_tetris_V_Black(112, 24);
+			ssd1306_tetris_Z_90_Black(111, -1);
+			ssd1306_tetris_T_links_Black(95,7);
+
+			ssd1306_tetris_T_White(59 + down12-3, 39);
+			ssd1306_tetris_T_Black(59 + down12, 39);
+			down12 = down12 + 3;
+		}
+		ssd1306_tetris_T_White(77, 39);
+		ssd1306_tetris_T_Black(79, 39);
 
   /* USER CODE END 3 */
 }
