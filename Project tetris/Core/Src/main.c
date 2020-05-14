@@ -287,7 +287,7 @@ int down5=0;
 */
 
 
-	int down11 = -16;
+/*	int down11 = -16;
 
 			while(down11 < 60){
 				ssd1306_tetris_L_Black(103, 47);
@@ -330,7 +330,296 @@ int down5=0;
 			down12 = down12 + 3;
 		}
 		ssd1306_tetris_T_White(77, 39);
+		ssd1306_tetris_T_Black(79, 39);*/
+
+
+
+/*
+  	  int down13 = -16;
+  	  int tel13 = 0;
+
+  	  while(tel13<103){
+			ssd1306_tetris_L_Black(103, 47);
+			ssd1306_tetris_R_Black(96,40);
+			ssd1306_tetris_V_Black(112, 24);
+			ssd1306_tetris_Z_90_Black(111, -1);
+			ssd1306_tetris_T_links_Black(95,7);
+			ssd1306_tetris_T_Black(79, 39);
+
+			ssd1306_tetris_T_links_White(down13-3,23);
+			ssd1306_tetris_T_links_Black(down13,23);
+			tel13 = tel13 + 3;
+			down13 = down13 + 3;
+  	  }
+
+		ssd1306_tetris_T_links_White(86,23);
+		ssd1306_tetris_T_links_Black(87,23);*/
+/*
+
+int down14 = -25;
+int tel14 = 0;
+
+
+	while(tel14<88){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_T_links_Black(95,7);
 		ssd1306_tetris_T_Black(79, 39);
+		ssd1306_tetris_T_links_Black(87,23);
+
+		ssd1306_tetris_L_White(down14 -3, 24);
+		ssd1306_tetris_L_Black(down14, 24);
+		down14 = down14 + 3;
+		tel14 = tel14 +3;
+	}
+
+int side15=0;
+
+	while(side15<26){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_T_links_Black(95,7);
+		ssd1306_tetris_T_Black(79, 39);
+		ssd1306_tetris_T_links_Black(87,23);
+
+		ssd1306_tetris_L_White(62, 24-side15+2);
+		ssd1306_tetris_L_Black(62, 24-side15);
+		side15 = side15 + 2;
+	}
+
+		ssd1306_tetris_L_White(62, 0);
+		ssd1306_tetris_L_Black(62, -1);
+
+
+int down16=0;
+
+	while(down16 < 18){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_T_links_Black(95,7);
+		ssd1306_tetris_T_Black(79, 39);
+		ssd1306_tetris_T_links_Black(87,23);
+
+		ssd1306_tetris_L_White(62+down16-3,-1);
+		ssd1306_tetris_L_Black(62+down16,-1);
+		down16 = down16+3;
+	}
+	ssd1306_tetris_L_White(77,-1);
+	ssd1306_tetris_L_Black(79,-1);*/
+/*
+int down17=-16;
+int tel17=0;
+
+	while(tel17<90){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_T_links_Black(95,7);
+		ssd1306_tetris_T_Black(79, 39);
+		ssd1306_tetris_T_links_Black(87,23);
+		ssd1306_tetris_L_Black(79,-1);
+
+		ssd1306_tetris_Z_White(down17-3, 23);
+		ssd1306_tetris_Z_Black(down17, 23);
+		down17 = down17 +3;
+		tel17 = tel17 +3;
+	}*/
+
+/*
+int down18=-30;
+int tel18=0;
+
+	while(tel18<70){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_T_links_Black(95,7);
+		ssd1306_tetris_T_Black(79, 39);
+		ssd1306_tetris_T_links_Black(87,23);
+		ssd1306_tetris_L_Black(79,-1);
+		ssd1306_tetris_Z_Black(71, 23);
+
+		ssd1306_tetris_R_White(down18 - 3, 28);
+		ssd1306_tetris_R_Black(down18, 28);
+
+		down18= down18 + 3;
+		tel18 = tel18 + 3;
+	}
+	ssd1306_tetris_R_White(39, 28);*/
+/*
+int side18=0;
+
+	while(side18<13){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_T_links_Black(95,7);
+		ssd1306_tetris_T_Black(79, 39);
+		ssd1306_tetris_T_links_Black(87,23);
+		ssd1306_tetris_L_Black(79,-1);
+		ssd1306_tetris_Z_Black(71, 23);
+
+		ssd1306_tetris_R_White(39,28-side18+2);
+		ssd1306_tetris_R_Black(39, 28-side18);
+
+		side18 = side18 + 2;
+	}
+
+int down19 = 0;
+
+	while(down19<26){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_T_links_Black(95,7);
+		ssd1306_tetris_T_Black(79, 39);
+		ssd1306_tetris_T_links_Black(87,23);
+		ssd1306_tetris_L_Black(79,-1);
+		ssd1306_tetris_Z_Black(71, 23);
+
+		ssd1306_tetris_R_White(39+down19-3,16);
+		ssd1306_tetris_R_Black(39+down19, 16);
+
+		down19 = down19 +3;
+	}
+
+	ssd1306_tetris_R_White(63,16);
+	ssd1306_tetris_R_Black(64, 16);*/
+
+  int down20=-16;
+  int tel20=0;
+
+  	while(tel20<70){
+  		ssd1306_tetris_L_Black(103, 47);
+  		ssd1306_tetris_R_Black(96,40);
+  		ssd1306_tetris_V_Black(112, 24);
+  		ssd1306_tetris_Z_90_Black(111, -1);
+  		ssd1306_tetris_T_links_Black(95,7);
+  		ssd1306_tetris_T_Black(79, 39);
+  		ssd1306_tetris_T_links_Black(87,23);
+  		ssd1306_tetris_L_Black(79,-1);
+  		ssd1306_tetris_Z_Black(71, 23);
+  		ssd1306_tetris_R_Black(64, 16);
+
+  		ssd1306_tetris_V_White(down20 - 3, 24);
+  		ssd1306_tetris_V_Black(down20, 24);
+
+  		down20= down20 + 3;
+  		tel20 = tel20 + 3;
+  	}
+
+  	int side20=0;
+
+  		while(side20<17){
+  			ssd1306_tetris_L_Black(103, 47);
+  			ssd1306_tetris_R_Black(96,40);
+  			ssd1306_tetris_V_Black(112, 24);
+  			ssd1306_tetris_Z_90_Black(111, -1);
+  			ssd1306_tetris_T_links_Black(95,7);
+  			ssd1306_tetris_T_Black(79, 39);
+  			ssd1306_tetris_T_links_Black(87,23);
+  			ssd1306_tetris_L_Black(79,-1);
+  			ssd1306_tetris_Z_Black(71, 23);
+  	  		ssd1306_tetris_R_Black(64, 16);
+
+  			ssd1306_tetris_V_White(53,24+side20-2);
+  			ssd1306_tetris_V_Black(53, 24+side20);
+
+  			side20 = side20 + 2;
+  		}
+
+  		int down21 = 0;
+
+  			while(down21<12){
+  				ssd1306_tetris_L_Black(103, 47);
+  				ssd1306_tetris_R_Black(96,40);
+  				ssd1306_tetris_V_Black(112, 24);
+  				ssd1306_tetris_Z_90_Black(111, -1);
+  				ssd1306_tetris_T_links_Black(95,7);
+  				ssd1306_tetris_T_Black(79, 39);
+  				ssd1306_tetris_T_links_Black(87,23);
+  				ssd1306_tetris_L_Black(79,-1);
+  				ssd1306_tetris_Z_Black(71, 23);
+
+  				ssd1306_tetris_V_White(53+down21-3,40);
+  				ssd1306_tetris_V_Black(53+down21, 40);
+
+  				down21 = down21 +3;
+  			}
+				ssd1306_tetris_V_White(62,40);
+				ssd1306_tetris_V_Black(64, 40);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /* USER CODE END 3 */
 }
