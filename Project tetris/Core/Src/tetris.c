@@ -9,11 +9,52 @@
 #include <string.h>
 #include <stdio.h>
 
+void ssd1306_tetris_Intro()
+{
+	ssd1306_Fill(Black);
+	ssd1306_SetCursor(31,23);
+	ssd1306_WriteString("KLAAR?", Font_11x18, White);
+	ssd1306_UpdateScreen();
+	HAL_Delay(3000);
+	ssd1306_Fill(Black);
+	ssd1306_SetCursor(42,23);
+	ssd1306_WriteString("3...", Font_11x18, White);
+	ssd1306_UpdateScreen();
+	HAL_Delay(1000);
+	ssd1306_Fill(Black);
+	ssd1306_SetCursor(42,23);
+	ssd1306_WriteString("2...", Font_11x18, White);
+	ssd1306_UpdateScreen();
+	HAL_Delay(1000);
+	ssd1306_Fill(Black);
+	ssd1306_SetCursor(42,23);
+	ssd1306_WriteString("1!!!", Font_11x18, White);
+	ssd1306_UpdateScreen();
+	HAL_Delay(1000);
+}
+void ssd1306_tetris_FillWhite_Intro() {
+int x = 0;
+int y = 32;
+int y2 = 32;
 
+	while(y<65)
+	{
+		while(x<128)
+		{
+			ssd1306_DrawPixel(x,y, White);
+			ssd1306_DrawPixel(x,y2, White);
+			x = x +1;
+		}
+	y = y +1;
+	y2 = y2 -1;
+	x = 0;
+		ssd1306_UpdateScreen();
+	}
+	ssd1306_UpdateScreen();
+}
 
 void ssd1306_tetris_L_Black(int x, int y) {
-
-	ssd1306_DrawPixel(1+x,16+y, Black);
+		ssd1306_DrawPixel(1+x,16+y, Black);
 		ssd1306_DrawPixel(2+x,16+y, Black);
 		ssd1306_DrawPixel(3+x,16+y, Black);
 		ssd1306_DrawPixel(4+x,16+y, Black);
@@ -1243,16 +1284,40 @@ void ssd1306_tetris_T_links_White(int x, int y) {
 	ssd1306_UpdateScreen();
 }
 
+void ssd1306_tetris_FillBLack_Outro() {
+int x = 0;
+int y = 0;
+int x2 = 128;
 
-void ssd1306_tetris_Black() {
-int x =0;
 
-	while(x<128){
-		ssd1306_DrawPixel(x,0, Black);
-		ssd1306_DrawPixel(x,1, Black);
-		ssd1306_DrawPixel(x,2, Black);
-		ssd1306_DrawPixel(x,3, Black);
+	while(x<65)
+	{
+		while(y<64)
+		{
+			ssd1306_DrawPixel(x,y, Black);
+			ssd1306_DrawPixel(x2,y, Black);
+			y = y +1;
+		}
 		x = x +1;
+		x2 = x2 -1;
+		y = 0;
+		ssd1306_UpdateScreen();
 	}
 	ssd1306_UpdateScreen();
 }
+void ssd1306_tetris_Outro(){
+	int x = 128;
+
+		while(x>0){
+	    		ssd1306_SetCursor(x + 9, 13);
+	    	    ssd1306_WriteString("Demo ended", Font_11x18, White);
+	    	    ssd1306_SetCursor(x + 8 ,32);
+	    	    ssd1306_WriteString("Ga naar spele.be", Font_7x10, White);
+	    	    ssd1306_SetCursor(x + 10,43);
+	    	    ssd1306_WriteString("voor de echte deal", Font_6x8, White);
+	    	    x = x -1;
+	    	    ssd1306_UpdateScreen();
+	    }
+}
+
+

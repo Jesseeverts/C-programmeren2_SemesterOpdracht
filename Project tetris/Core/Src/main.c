@@ -28,7 +28,6 @@
 #include <stdio.h>
 #include "ssd1306.h"
 #include <ssd1306_tests.h>
-#include <klok.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -101,7 +100,7 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+   HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -126,10 +125,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   debug_print("Hello from dev board\r\n");
   ssd1306_Init();
-  ssd1306_Fill(White);
-
+  ssd1306_tetris_Intro();
+  ssd1306_tetris_FillWhite_Intro();
   /*eerste figuur*/
-  /*int side1 = 0;
+  int side1 = 0;
   int down1 = -25 ;
   int tel1 = 0;
 
@@ -149,11 +148,11 @@ int main(void)
 		side1 = side1 + 2;
 	}
 	ssd1306_tetris_L_White(103,46);
-	ssd1306_tetris_L_Black(103, 47);*/
+	ssd1306_tetris_L_Black(103, 47);
 
 
 	  /*tweede figuur*/
-/*	int tel2 = 0;
+    int tel2 = 0;
 	int down2 = -30;
 	int side2 = 0;
 
@@ -169,9 +168,9 @@ int main(void)
 		ssd1306_tetris_R_White(96, 28 + side2-2);
 		ssd1306_tetris_R_Black(96, 28 + side2);
 		side2 = side2 + 2;
-	}*/
+	}
 	  /*derde figuur*/
-	/*int tel3 = 0;
+    int tel3 = 0;
 	int down3 = -16;
 	int side3 = 0;
 
@@ -186,11 +185,11 @@ int main(void)
 	}
 	ssd1306_tetris_V_White(110, 24);
 	ssd1306_tetris_V_Black(112, 24);
-*/
+
 	 /*vierde figuur*/
-/*int tel4 = 0;
-int down4 = -16;
-int side4 = 0;
+  int tel4 = 0;
+  int down4 = -16;
+  int side4 = 0;
 
 	while(tel4<45){
 		ssd1306_tetris_L_Black(103, 47);
@@ -234,9 +233,9 @@ int down5=0;
 		ssd1306_tetris_Z_90_Black(33+down5, -1);
 		down5 = down5 +3;
 		tel5 = tel5 + 3;
-	}*/
+	}
   /*figuur 5*/
-/*	int down8 = -16 ;
+    int down8 = -16 ;
 	int tel8 = 0;
 
 				while( tel8 < 80){
@@ -284,10 +283,10 @@ int down5=0;
 			}
 			ssd1306_tetris_T_links_White(93,7);
 			ssd1306_tetris_T_links_Black(95,7);
-*/
 
 
-/*	int down11 = -16;
+
+			int down11 = -16;
 
 			while(down11 < 60){
 				ssd1306_tetris_L_Black(103, 47);
@@ -330,11 +329,11 @@ int down5=0;
 			down12 = down12 + 3;
 		}
 		ssd1306_tetris_T_White(77, 39);
-		ssd1306_tetris_T_Black(79, 39);*/
+		ssd1306_tetris_T_Black(79, 39);
 
 
 
-/*
+
   	  int down13 = -16;
   	  int tel13 = 0;
 
@@ -353,8 +352,8 @@ int down5=0;
   	  }
 
 		ssd1306_tetris_T_links_White(86,23);
-		ssd1306_tetris_T_links_Black(87,23);*/
-/*
+		ssd1306_tetris_T_links_Black(87,23);
+
 
 int down14 = -25;
 int tel14 = 0;
@@ -411,8 +410,8 @@ int down16=0;
 		down16 = down16+3;
 	}
 	ssd1306_tetris_L_White(77,-1);
-	ssd1306_tetris_L_Black(79,-1);*/
-/*
+	ssd1306_tetris_L_Black(79,-1);
+
 int down17=-16;
 int tel17=0;
 
@@ -430,9 +429,9 @@ int tel17=0;
 		ssd1306_tetris_Z_Black(down17, 23);
 		down17 = down17 +3;
 		tel17 = tel17 +3;
-	}*/
+	}
 
-/*
+
 int down18=-30;
 int tel18=0;
 
@@ -453,8 +452,8 @@ int tel18=0;
 		down18= down18 + 3;
 		tel18 = tel18 + 3;
 	}
-	ssd1306_tetris_R_White(39, 28);*/
-/*
+	ssd1306_tetris_R_White(39, 28);
+
 int side18=0;
 
 	while(side18<13){
@@ -494,7 +493,7 @@ int down19 = 0;
 	}
 
 	ssd1306_tetris_R_White(63,16);
-	ssd1306_tetris_R_Black(64, 16);*/
+	ssd1306_tetris_R_Black(64, 16);
 
   int down20=-16;
   int tel20=0;
@@ -559,7 +558,8 @@ int down19 = 0;
 				ssd1306_tetris_V_White(62,40);
 				ssd1306_tetris_V_Black(64, 40);
 
-
+  ssd1306_tetris_FillBLack_Outro();
+  ssd1306_tetris_Outro();
 
 
 

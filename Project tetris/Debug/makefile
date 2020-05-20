@@ -40,8 +40,8 @@ stm32L432KC_SSD1306.bin \
 all: stm32L432KC_SSD1306.elf secondary-outputs
 
 # Tool invocations
-stm32L432KC_SSD1306.elf: $(OBJS) $(USER_OBJS) C:\Users\ralph\OneDrive\ -\ PXL\pxl_drive\2019-2020\ EA\CProgrammeren2\Project\ tetris\Project\ tetris\STM32L432KCUX_FLASH.ld
-	arm-none-eabi-gcc -o "stm32L432KC_SSD1306.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ralph\OneDrive - PXL\pxl_drive\2019-2020 EA\CProgrammeren2\Project tetris\Project tetris\STM32L432KCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32L432KC_SSD1306.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+stm32L432KC_SSD1306.elf: $(OBJS) $(USER_OBJS) C:\Users\jesse\OneDrive\ -\ PXL\School\2019-2020\ -\ 1\ AEIa\C-programmeren\ 2\SemOpdracht\Projecten\STM32F432KC_SSD1306_I2C_driver-master\STM32L432KCUX_FLASH.ld
+	arm-none-eabi-gcc -o "stm32L432KC_SSD1306.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\jesse\OneDrive - PXL\School\2019-2020 - 1 AEIa\C-programmeren 2\SemOpdracht\Projecten\STM32F432KC_SSD1306_I2C_driver-master\STM32L432KCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32L432KC_SSD1306.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

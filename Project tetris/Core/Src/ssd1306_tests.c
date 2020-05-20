@@ -39,16 +39,18 @@ void ssd1306_TestBorder() {
 }
 
 void ssd1306_TestFonts() {
-    ssd1306_Fill(White);
-    ssd1306_SetCursor(2, 0);
-    ssd1306_WriteString("Ralph", Font_16x26, Black);
-    ssd1306_SetCursor(2, 26);
-    ssd1306_WriteString("Ralph", Font_11x18, Black);
-    ssd1306_SetCursor(2, 26+18);
-    ssd1306_WriteString("Ralph", Font_7x10, Black);
-    ssd1306_SetCursor(2, 26+18+10);
-    ssd1306_WriteString("Ralph", Font_6x8, Black);
-    ssd1306_UpdateScreen();
+int x = 128;
+
+	while(x>0){
+    		ssd1306_SetCursor(x + 9, 13);
+    	    ssd1306_WriteString("Demo ended", Font_11x18, White);
+    	    ssd1306_SetCursor(x + 8 ,32);
+    	    ssd1306_WriteString("Ga naar spele.be", Font_7x10, White);
+    	    ssd1306_SetCursor(x + 10,43);
+    	    ssd1306_WriteString("voor de echte deal", Font_6x8, White);
+    	    x = x -1;
+    	    ssd1306_UpdateScreen();
+    }
 }
 
 void ssd1306_TestFPS() {
