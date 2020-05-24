@@ -2,7 +2,7 @@
  * klok.h
  *
  *  Created on: Jan 30, 2020
- *      Author: 20004719
+ *      Author: Moeskops Ralph & Everts Jesse
  */
 
 #ifndef INC_SSD1306_TEST_H_

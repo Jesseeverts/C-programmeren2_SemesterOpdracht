@@ -123,17 +123,23 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+/*------------------------------------------------ Hier begint de echte code -----------------------------------------------*/
+/*-----------------------------------------------Intro-----------------------------------------------*/
+
+
+
   debug_print("Hello from dev board\r\n");
   ssd1306_Init();
   ssd1306_tetris_Intro();
   ssd1306_tetris_FillWhite_Intro();
-  /*eerste figuur*/
+
+  /*-----------------------------------------------eerste figuur-----------------------------------------------*/
   int side1 = 0;
   int down1 = -25 ;
   int tel1 = 0;
 
 	while( tel1 < 128){
-
 		ssd1306_tetris_L_White(down1 -3, 24);
 		ssd1306_tetris_L_Black(down1, 24);
 		down1 = down1 + 3;
@@ -151,7 +157,7 @@ int main(void)
 	ssd1306_tetris_L_Black(103, 47);
 
 
-	  /*tweede figuur*/
+	/*-----------------------------------------------tweede figuur-----------------------------------------------*/
     int tel2 = 0;
 	int down2 = -30;
 	int side2 = 0;
@@ -169,7 +175,7 @@ int main(void)
 		ssd1306_tetris_R_Black(96, 28 + side2);
 		side2 = side2 + 2;
 	}
-	  /*derde figuur*/
+	/*-----------------------------------------------derde figuur-----------------------------------------------*/
     int tel3 = 0;
 	int down3 = -16;
 	int side3 = 0;
@@ -186,10 +192,10 @@ int main(void)
 	ssd1306_tetris_V_White(110, 24);
 	ssd1306_tetris_V_Black(112, 24);
 
-	 /*vierde figuur*/
-  int tel4 = 0;
-  int down4 = -16;
-  int side4 = 0;
+	/*-----------------------------------------------vierde figuur-----------------------------------------------*/
+    int tel4 = 0;
+    int down4 = -16;
+    int side4 = 0;
 
 	while(tel4<45){
 		ssd1306_tetris_L_Black(103, 47);
@@ -212,19 +218,22 @@ int main(void)
 	ssd1306_tetris_V_Black(112, 24);
 	ssd1306_tetris_Z_90_White(34,24);
 
-int tel6 =0;
-		while(tel6<20){
+    int tel6 =0;
+	while(tel6<20){
 
-			ssd1306_tetris_L_Black(103, 47);
-			ssd1306_tetris_R_Black(96,40);
-			ssd1306_tetris_V_Black(112, 24);
-			ssd1306_tetris_Z_90_White(34, 24 - tel6+2);
-			ssd1306_tetris_Z_90_Black(34, 24 - tel6);
-			tel6=tel6+2;
-		}
-		ssd1306_tetris_Z_90_White(34, 6);
-int tel5 =0;
-int down5=0;
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_White(34, 24 - tel6+2);
+		ssd1306_tetris_Z_90_Black(34, 24 - tel6);
+		tel6=tel6+2;
+	}
+
+	ssd1306_tetris_Z_90_White(34, 6);
+
+    int tel5 =0;
+    int down5=0;
+
 	while(tel5<81){
 		ssd1306_tetris_L_Black(103, 47);
 		ssd1306_tetris_R_Black(96,40);
@@ -234,129 +243,130 @@ int down5=0;
 		down5 = down5 +3;
 		tel5 = tel5 + 3;
 	}
-  /*figuur 5*/
+
+  /*-----------------------------------------------figuur 5-----------------------------------------------*/
     int down8 = -16 ;
 	int tel8 = 0;
 
-				while( tel8 < 80){
+	while( tel8 < 80){
 
-					ssd1306_tetris_L_Black(103, 47);
-					ssd1306_tetris_R_Black(96,40);
-					ssd1306_tetris_V_Black(112, 24);
-					ssd1306_tetris_Z_90_Black(111, -1);
+	    ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
 
-					ssd1306_tetris_T_links_White(down8-3,24);
-					ssd1306_tetris_T_links_Black(down8,24);
-					down8 = down8 + 3;
-					tel8 = tel8 + 3;
-				}
-				ssd1306_tetris_T_links_White(62,24);
+		ssd1306_tetris_T_links_White(down8-3,24);
+		ssd1306_tetris_T_links_Black(down8,24);
+		down8 = down8 + 3;
+		tel8 = tel8 + 3;
+	}
+	ssd1306_tetris_T_links_White(62,24);
 
 	int tel9=0;
-				while( tel9 < 18){
+    while( tel9 < 18){
 
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
 
-					ssd1306_tetris_L_Black(103, 47);
-					ssd1306_tetris_R_Black(96,40);
-					ssd1306_tetris_V_Black(112, 24);
-					ssd1306_tetris_Z_90_Black(111, -1);
-
-					ssd1306_tetris_T_links_White(63,24-tel9+2);
-					ssd1306_tetris_T_links_Black(63,24-tel9);
-					tel9 = tel9 + 2;
-				}
-				ssd1306_tetris_T_links_White(63,8);
-				ssd1306_tetris_T_links_Black(63,7);
+		ssd1306_tetris_T_links_White(63,24-tel9+2);
+		ssd1306_tetris_T_links_Black(63,24-tel9);
+		tel9 = tel9 + 2;
+	}
+	ssd1306_tetris_T_links_White(63,8);
+	ssd1306_tetris_T_links_Black(63,7);
 
 	int down9 = 0;
 
-			while( down9 < 33){
+    while( down9 < 33){
 
-					ssd1306_tetris_L_Black(103, 47);
-					ssd1306_tetris_R_Black(96,40);
-					ssd1306_tetris_V_Black(112, 24);
-					ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+	    ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
 
-					ssd1306_tetris_T_links_White(63+down9-3,7);
-					ssd1306_tetris_T_links_Black(63+down9,7);
-					down9 = down9 + 3;
-			}
-			ssd1306_tetris_T_links_White(93,7);
-			ssd1306_tetris_T_links_Black(95,7);
+		ssd1306_tetris_T_links_White(63+down9-3,7);
+		ssd1306_tetris_T_links_Black(63+down9,7);
+		down9 = down9 + 3;
+	}
+	ssd1306_tetris_T_links_White(93,7);
+	ssd1306_tetris_T_links_Black(95,7);
 
+    /*-----------------------------------------------Zesde figuur-----------------------------------------------*/
 
+	int down11 = -16;
 
-			int down11 = -16;
+	while(down11 < 60){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_T_links_Black(95,7);
 
-			while(down11 < 60){
-				ssd1306_tetris_L_Black(103, 47);
-				ssd1306_tetris_R_Black(96,40);
-				ssd1306_tetris_V_Black(112, 24);
-				ssd1306_tetris_Z_90_Black(111, -1);
-				ssd1306_tetris_T_links_Black(95,7);
+		ssd1306_tetris_T_White(down11-3, 20);
+		ssd1306_tetris_T_Black(down11, 20);
+		down11 = down11 + 3;
+	}
+	ssd1306_tetris_T_White(60, 20);
 
-
-				ssd1306_tetris_T_White(down11-3, 20);
-				ssd1306_tetris_T_Black(down11, 20);
-				down11 = down11 + 3;
-			}
-			ssd1306_tetris_T_White(60, 20);
 	int side11 = 0;
-			while(side11 < 18){
-				ssd1306_tetris_L_Black(103, 47);
-				ssd1306_tetris_R_Black(96,40);
-				ssd1306_tetris_V_Black(112, 24);
-				ssd1306_tetris_Z_90_Black(111, -1);
-				ssd1306_tetris_T_links_Black(95,7);
+	while(side11 < 18){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_T_links_Black(95,7);
 
-				ssd1306_tetris_T_White(59, 20 + side11-2);
-				ssd1306_tetris_T_Black(59, 20 + side11);
-				side11 = side11 + 2;
-			}
+		ssd1306_tetris_T_White(59, 20 + side11-2);
+		ssd1306_tetris_T_Black(59, 20 + side11);
+		side11 = side11 + 2;
+	}
 
-			ssd1306_tetris_T_White(59, 36);
+	ssd1306_tetris_T_White(59, 36);
+    /*-----------------------------------------------zevende figuur-----------------------------------------------*/
 	int down12 = 0;
-		while(down12 < 20)
-		{
-			ssd1306_tetris_L_Black(103, 47);
-			ssd1306_tetris_R_Black(96,40);
-			ssd1306_tetris_V_Black(112, 24);
-			ssd1306_tetris_Z_90_Black(111, -1);
-			ssd1306_tetris_T_links_Black(95,7);
+	while(down12 < 20)
+	{
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_T_links_Black(95,7);
 
-			ssd1306_tetris_T_White(59 + down12-3, 39);
-			ssd1306_tetris_T_Black(59 + down12, 39);
-			down12 = down12 + 3;
-		}
-		ssd1306_tetris_T_White(77, 39);
+		ssd1306_tetris_T_White(59 + down12-3, 39);
+		ssd1306_tetris_T_Black(59 + down12, 39);
+		down12 = down12 + 3;
+	}
+	ssd1306_tetris_T_White(77, 39);
+	ssd1306_tetris_T_Black(79, 39);
+
+
+    /*-----------------------------------------------achtste figuur-----------------------------------------------*/
+
+  	int down13 = -16;
+  	int tel13 = 0;
+
+  	while(tel13<103){
+		ssd1306_tetris_L_Black(103, 47);
+		ssd1306_tetris_R_Black(96,40);
+		ssd1306_tetris_V_Black(112, 24);
+		ssd1306_tetris_Z_90_Black(111, -1);
+		ssd1306_tetris_T_links_Black(95,7);
 		ssd1306_tetris_T_Black(79, 39);
 
+		ssd1306_tetris_T_links_White(down13-3,23);
+		ssd1306_tetris_T_links_Black(down13,23);
+		tel13 = tel13 + 3;
+		down13 = down13 + 3;
+  	}
 
+	ssd1306_tetris_T_links_White(86,23);
+	ssd1306_tetris_T_links_Black(87,23);
+    /*-----------------------------------------------negende figuur-----------------------------------------------*/
 
-
-  	  int down13 = -16;
-  	  int tel13 = 0;
-
-  	  while(tel13<103){
-			ssd1306_tetris_L_Black(103, 47);
-			ssd1306_tetris_R_Black(96,40);
-			ssd1306_tetris_V_Black(112, 24);
-			ssd1306_tetris_Z_90_Black(111, -1);
-			ssd1306_tetris_T_links_Black(95,7);
-			ssd1306_tetris_T_Black(79, 39);
-
-			ssd1306_tetris_T_links_White(down13-3,23);
-			ssd1306_tetris_T_links_Black(down13,23);
-			tel13 = tel13 + 3;
-			down13 = down13 + 3;
-  	  }
-
-		ssd1306_tetris_T_links_White(86,23);
-		ssd1306_tetris_T_links_Black(87,23);
-
-
-int down14 = -25;
-int tel14 = 0;
+    int down14 = -25;
+    int tel14 = 0;
 
 
 	while(tel14<88){
@@ -374,7 +384,7 @@ int tel14 = 0;
 		tel14 = tel14 +3;
 	}
 
-int side15=0;
+    int side15=0;
 
 	while(side15<26){
 		ssd1306_tetris_L_Black(103, 47);
@@ -390,11 +400,11 @@ int side15=0;
 		side15 = side15 + 2;
 	}
 
-		ssd1306_tetris_L_White(62, 0);
-		ssd1306_tetris_L_Black(62, -1);
+	ssd1306_tetris_L_White(62, 0);
+	ssd1306_tetris_L_Black(62, -1);
 
 
-int down16=0;
+    int down16=0;
 
 	while(down16 < 18){
 		ssd1306_tetris_L_Black(103, 47);
@@ -412,8 +422,9 @@ int down16=0;
 	ssd1306_tetris_L_White(77,-1);
 	ssd1306_tetris_L_Black(79,-1);
 
-int down17=-16;
-int tel17=0;
+    /*-----------------------------------------------tiende figuur-----------------------------------------------*/
+    int down17=-16;
+    int tel17=0;
 
 	while(tel17<90){
 		ssd1306_tetris_L_Black(103, 47);
@@ -431,9 +442,9 @@ int tel17=0;
 		tel17 = tel17 +3;
 	}
 
-
-int down18=-30;
-int tel18=0;
+    /*-----------------------------------------------elfde figuur-----------------------------------------------*/
+    int down18=-30;
+    int tel18=0;
 
 	while(tel18<70){
 		ssd1306_tetris_L_Black(103, 47);
@@ -454,7 +465,7 @@ int tel18=0;
 	}
 	ssd1306_tetris_R_White(39, 28);
 
-int side18=0;
+    int side18=0;
 
 	while(side18<13){
 		ssd1306_tetris_L_Black(103, 47);
@@ -473,7 +484,7 @@ int side18=0;
 		side18 = side18 + 2;
 	}
 
-int down19 = 0;
+    int down19 = 0;
 
 	while(down19<26){
 		ssd1306_tetris_L_Black(103, 47);
@@ -491,12 +502,12 @@ int down19 = 0;
 
 		down19 = down19 +3;
 	}
-
 	ssd1306_tetris_R_White(63,16);
 	ssd1306_tetris_R_Black(64, 16);
 
-  int down20=-16;
-  int tel20=0;
+    /*-----------------------------------------------twaalfde figuur-----------------------------------------------*/
+    int down20=-16;
+    int tel20=0;
 
   	while(tel20<70){
   		ssd1306_tetris_L_Black(103, 47);
@@ -519,7 +530,27 @@ int down19 = 0;
 
   	int side20=0;
 
-  		while(side20<17){
+  	while(side20<17){
+  		ssd1306_tetris_L_Black(103, 47);
+  		ssd1306_tetris_R_Black(96,40);
+  		ssd1306_tetris_V_Black(112, 24);
+  		ssd1306_tetris_Z_90_Black(111, -1);
+  		ssd1306_tetris_T_links_Black(95,7);
+  		ssd1306_tetris_T_Black(79, 39);
+  		ssd1306_tetris_T_links_Black(87,23);
+  		ssd1306_tetris_L_Black(79,-1);
+  		ssd1306_tetris_Z_Black(71, 23);
+  		ssd1306_tetris_R_Black(64, 16);
+
+  		ssd1306_tetris_V_White(53,24+side20-2);
+  		ssd1306_tetris_V_Black(53, 24+side20);
+
+  		side20 = side20 + 2;
+  	}
+
+  	int down21 = 0;
+
+  		while(down21<12){
   			ssd1306_tetris_L_Black(103, 47);
   			ssd1306_tetris_R_Black(96,40);
   			ssd1306_tetris_V_Black(112, 24);
@@ -529,96 +560,18 @@ int down19 = 0;
   			ssd1306_tetris_T_links_Black(87,23);
   			ssd1306_tetris_L_Black(79,-1);
   			ssd1306_tetris_Z_Black(71, 23);
-  	  		ssd1306_tetris_R_Black(64, 16);
 
-  			ssd1306_tetris_V_White(53,24+side20-2);
-  			ssd1306_tetris_V_Black(53, 24+side20);
+  			ssd1306_tetris_V_White(53+down21-3,40);
+  			ssd1306_tetris_V_Black(53+down21, 40);
 
-  			side20 = side20 + 2;
+  			down21 = down21 +3;
   		}
-
-  		int down21 = 0;
-
-  			while(down21<12){
-  				ssd1306_tetris_L_Black(103, 47);
-  				ssd1306_tetris_R_Black(96,40);
-  				ssd1306_tetris_V_Black(112, 24);
-  				ssd1306_tetris_Z_90_Black(111, -1);
-  				ssd1306_tetris_T_links_Black(95,7);
-  				ssd1306_tetris_T_Black(79, 39);
-  				ssd1306_tetris_T_links_Black(87,23);
-  				ssd1306_tetris_L_Black(79,-1);
-  				ssd1306_tetris_Z_Black(71, 23);
-
-  				ssd1306_tetris_V_White(53+down21-3,40);
-  				ssd1306_tetris_V_Black(53+down21, 40);
-
-  				down21 = down21 +3;
-  			}
-				ssd1306_tetris_V_White(62,40);
-				ssd1306_tetris_V_Black(64, 40);
-
-  ssd1306_tetris_FillBLack_Outro();
-  ssd1306_tetris_Outro();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		ssd1306_tetris_V_White(62,40);
+		ssd1306_tetris_V_Black(64, 40);
+
+    /*-----------------------------------------------Outro-----------------------------------------------*/
+    ssd1306_tetris_FillBLack_Outro();
+    ssd1306_tetris_Outro();
 
 
   /* USER CODE END 3 */
